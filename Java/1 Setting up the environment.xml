@@ -1,0 +1,54 @@
+<!-- Setting Up the Environment
+
+Maven Setup:
+
+// Install Maven by downloading it from the official website and following the installation instructions.
+// Create a pom.xml file in your project root directory to manage dependencies. -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>web-scraping</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.14.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>3.141.59</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents.client5</groupId>
+      <artifactId>httpclient5</artifactId>
+      <version>5.1</version>
+    </dependency>
+  </dependencies>
+</project>
+
+<!-- Run the following code to build your Maven project. -->
+
+`mvn clean install`
+
+<!-- Setting Up Scrape.do
+1. Sign up on the Scrape.do website and get your API key from the dashboard.
+2. Add the Scrape.do Java client in your pom.xml file -->
+
+<dependency>
+    <groupId>scrape.do</groupId>
+    <artifactId>scrape-do-java-client</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
+
+<!-- Configure the API key in your application settings or environment variables: -->
+
+``` 
+<!-- Sample API code -->
+curl "http://api.scrape.do?token=(Your API Key)=https://httpbin.co/ip"
+```
